@@ -36,3 +36,18 @@ brew install --cask raycast
 brew install --cask rectangle
 brew install stats
 brew install scroll-reverser
+
+#  Install wallpapers
+echo "Installing wallpapers..."
+read -p "Enter the directory where you want to download wallpapers [default: \$HOME/Pictures]: " WALLPAPER_DIR
+WALLPAPER_DIR="${WALLPAPER_DIR:-$HOME/Pictures}"
+
+if [ ! -d "$WALLPAPER_DIR" ]; then
+    echo "Creating directory: $WALLPAPER_DIR"
+    mkdir -p "$WALLPAPER_DIR"
+else
+    echo "Directory already exists: $WALLPAPER_DIR"
+fi
+cd $WALLPAPER_DIR
+git clone --depth=1 https://github.com/mylinuxforwork/wallpaper.git
+echo "Wallpapers downloaded to: $WALLPAPER_DIR/wallpaper"
