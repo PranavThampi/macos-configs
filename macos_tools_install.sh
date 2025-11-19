@@ -50,4 +50,5 @@ else
 fi
 cd $WALLPAPER_DIR
 git clone --depth=1 https://github.com/mylinuxforwork/wallpaper.git
+git clone --depth=1 https://github.com/vyrx-dev/Wallpapers.git
 echo "Wallpapers downloaded to: $WALLPAPER_DIR/wallpaper"
